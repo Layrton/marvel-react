@@ -18,7 +18,7 @@ type PlacesAutocompleteType = {
 
 const mapContainerStyle = {
   height: "400px",
-  width: "800px"
+  width: "600px"
 }
 
 const center = {
@@ -51,6 +51,7 @@ function Map() {
         mapContainerStyle={mapContainerStyle}
         zoom={16}
         center={selected !== null ? selected : center}
+
       >
         {selected && <MarkerF position={selected} />}
       </GoogleMap>
@@ -115,7 +116,7 @@ export const PlacesAutocomplete = ({ setSelected }: PlacesAutocompleteType) => {
         onChange={handleInput}
         disabled={!ready}
         placeholder="Digite o endereço"
-        className="h-10 p-5 rounded-md w-96 bg-slate-100"
+        className="h-10 p-5 rounded-md sm:w-fit lg:w-96 bg-slate-100"
         type="text"
       />
       {status === "OK" && <ul>{renderSuggestions()}</ul>}

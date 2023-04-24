@@ -1,6 +1,5 @@
 import { ComicItem } from './components/ComicItem';
 import { useContext, useState } from 'react';
-import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { CartContext } from './context/CartContext';
@@ -26,7 +25,7 @@ function App() {
 
   return (
     <main className="flex">
-      <div className="flex flex-1 gap-16 justify-center flex-wrap items-center mx-56 my-36 ">
+      <div className="flex flex-1 gap-14 justify-center flex-wrap items-center sm:mx-0 md:mx-24 lg:mx-56 my-24">
         <Modal
           open={isModalOpen}
           onClose={() => { setIsModalOpen(false); setSelectedComic(0) }}
@@ -34,9 +33,9 @@ function App() {
           <div className="absolute top-1/2 left-1/2 translate-y-center translate-x-center bg-slate-100 border-slate-300 border-2 rounded-lg p-6 shadow-2xl">
             {isModalLoading ? <p>Carregando...</p> : (
               <div className="flex flex-col items-end">
-                <Button onClick={() => { setIsModalOpen(false) }}>
+                <button onClick={() => { setIsModalOpen(false) }}>
                   <AiFillCloseCircle size={34} color={"#000000"} />
-                </Button>
+                </button>
                 <div className="grid grid-cols-2 gap-5">
                   <div className="flex flex-col gap-6">
                     <div className="text-2xl font-bold">

@@ -38,8 +38,8 @@ export default function Cart() {
   }, [deliveryAddress, setValue])
 
   return (
-    <div className="grid grid-cols-2 mx-32 my-32">
-      <div className="flex align-middle items-center h-full justify-center">
+    <div className="grid sm:grid-cols-1 sm:w-fit lg:grid-cols-2 lg:mx-32 lg:my-32">
+      <div className="flex align-middle  items-start h-full justify-center mb-60 ">
         <CheckoutCart />
       </div>
       <div className="flex flex-col align-middle items-center h-full justify-start">
