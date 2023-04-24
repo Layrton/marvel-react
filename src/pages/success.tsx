@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../context/CartContext"
 
 export default function Success() {
+  document.title = "Sucesso | Compra finalizada"
   const { deliveryAddress } = useContext(CartContext)
   console.log(deliveryAddress)
 

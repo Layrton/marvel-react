@@ -17,6 +17,7 @@ const addressSchema = z.object({
 })
 
 export default function Cart() {
+  document.title = "Carrinho | Comprar quadrinhos"
   const navigate = useNavigate()
   const { deliveryAddress, clearCart, cart } = useContext<any>(CartContext)
   const { register, handleSubmit, setValue } = useForm({

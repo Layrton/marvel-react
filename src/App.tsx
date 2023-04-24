@@ -10,6 +10,7 @@ import { ComicContext } from './context/ComicContext';
 import './styles/globals.css'
 
 function App() {
+  document.title = "Home | Comprar quadrinhos"
   const { comics, currentModalComic, isModalLoading, setIsModalLoading, setSelectedComic } = useContext(ComicContext)
   const { addProduct } = useContext(CartContext)
   const [isModalOpen, setIsModalOpen] = useState(false)
